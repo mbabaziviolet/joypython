@@ -1,0 +1,251 @@
+# a python program to read the value of n ,number is zero or non zero
+#the user inputs a number
+#using the if,elif statements to execute the code
+num1=10
+num1=int(input('Enter a number:'))
+if num1>0:
+    print('non zero value')
+elif num1 == 0:
+    print('zero')
+    
+
+#the largest of two numbers
+#the user inputs the first value and the second value
+#the output must be an integer not a float
+#given the variables a,b and the values 20,40
+#using the if,elif,else statements
+a=20
+b=40
+a=int(input('Enter the first value a:'))
+b=int(input('Enter the second value b:'))
+if(a>b):
+    print('20 is greater than 40')
+elif(b>a):
+    print('40 is greater than 20')
+else:
+    print('both a and b are equal')
+
+
+#program that reads the number and checks if positive or negative
+#using if,elif statements
+#given my variable c and the value 7 being an integer
+c=7
+c=int(input('Enter a number:'))
+if c>-19:
+    print('Positive number')
+elif c<-19:
+    print('Negative number')
+    
+    
+#check if entered character is vowel or consonant
+#my variable is d
+#the if,else statements to print out a vowel or consonant
+d=input('Enter a character:')
+if(d == 'A' or d == 'a' or d == 'E' or d =='e' or d =='I' or d == 'i' or d =='O' or d =='o' or d =='U' or d =='u' ):
+    print(d,'is a Vowel')
+else:
+    print(d,'is a Consonant')
+
+
+
+
+#program to find largest of three numbers
+#given my variables l,p,q and assign them values 12,16,9
+#the values are integers
+#the user inputs the first number,second and third
+#if,elif,else will output either the largest of three numbers
+l=12
+p=16
+q=9
+l=int(input('Enter first number:'))
+p=int(input('Enter second number:'))
+q=int(input('Enter third number:'))
+if(l>=p) and (l>=q):
+    largest=l
+elif(p>=l) and (p>=q):
+    largest=p
+else:
+    largest=q
+print('The largest number is',largest)
+    
+    
+
+#program to find smallest of three numbers
+#variables are a,b,c and assigned them with 14,22'67
+#the if statements will output the smallest of three numbers
+a=14
+b=22
+c=67
+a=int(input('Enter first number:'))
+b=int(input('Enter second number:'))
+c=int(input('Enter third number:'))
+if a<b and a<c:
+    smallest=a
+if b<a and b<c:
+    smallest=b
+if c<a and c<b:
+    smallest=c
+print('a,''is the smallest of three numbers')
+
+
+
+#program of whether a number is even or odd
+#variable is num ,assigned with 43 as an integer
+#the if,else statement tells if the number is even or odd
+#the number is even if divisible by 2 gives a remainder 0.If a remainder is 1 it is an odd number
+#.format is a python function
+num=43
+num=int(input('Enter a number:'))
+if(num%2)==0:     #it will be true if num is even
+    print('{0} is Even'.format(num))
+else:
+    print('{0} is Odd'.format(num))
+    
+    
+
+#program to check a year for leap year
+#year is my variable and assign it 2000
+#if year is divisible by 4 (%4) then is a leap year
+#if year is divible by 100 then is not leap year
+year=2000
+if(year%4)==0:
+    if(year%100)==0:
+        if(year%400)==0:
+            print('{0} is a leap year'.format(year))
+        else:
+            print('{0} is not a leap year'.format(year))
+            
+
+
+#program insures its drivers in the following cases
+def if_elif_example():
+    Age=30
+    if(Age>=25):
+        print('driver male is unmarried')
+    elif(20<=Age<25): #20 is lessthan age and age is lessthan 25
+        print('driver female is unmarried')
+    else:
+        print('driver is married')
+if_elif_example()
+
+
+
+
+#THE WHILE LOOP PROGRAM QUESTIONS
+#program to print even numbers
+#even numbers are divisible by two
+p=int(input('Enter a maximum value:'))
+number=1
+while number <= p:
+    if(number%2==0):
+        print('{0}'.format(number))
+    number=number+1
+        
+    
+#program to print odd numbers up to n
+#we can still replace the forloop with while loop
+k=int(input('Enter maximum value:'))
+number=1
+while number <=k:
+    if(number%2!=0):
+        print('{0}'.format(number))
+    number=number+1   
+    
+
+
+#sum of even numbers up to n
+h=int(input('Enter the maximum value:'))
+total=0
+number=1
+while number <=h:
+    if(number %2 ==0):
+        print('{0}'.format(number))
+        total = total+ number
+    number = number + 1
+print('the sum of even numbers from 1 to n={0}'.format(total))
+
+
+   
+#python program to print natural numbers in reverse order
+#the user inputs any number of his or her choice like 15
+#it will print numbers in reverse order
+num3=int(input('Enter the number:'))
+b=num3
+print('list of natural numbers from{0} to 1 in reverse order:'.format(num3))
+while(b>=1):
+    print(b,end='')
+    b=b-1
+
+
+#program to check whether given number is palindrome
+m=int(input('Enter number:'))
+temp=m
+rev=0
+while(m>0):
+    dig=m%10
+    rev=rev*10+dig
+    m=m//10
+if(temp==rev):
+    print('The number is palindrome!')
+else:
+    print('The number is not palindrome!')
+    
+    
+    
+    
+    
+    
+#THE FOOR LOOP
+#program to print even numbers up to n
+maximum =int(input('Please enter the maximum value:'))
+for number in range(1,maximum+1):
+    if(number % 2 == 0):
+        print('{0}'.format(number))
+        
+        
+#odd numbers up to n
+maximum =int(input('Please enter the maximum value'))
+for number in range(1,maximum + 1):
+    if(number % 2!=0):
+        print('{0}'.format(number))
+        
+        
+        
+        
+#program that prints 1,2,4,8,16,32..n
+c=int(input('Enter the range of number(Limit):'))
+i=1
+while i<=c:
+    print(i,end="")
+    i*=2
+    
+    
+    
+#the square root of number is prime or not
+#to take input from the user
+#prime numbers are greater than 1
+#checking for factors
+num = 407
+num =int(input('Enter a number:'))
+if num > 1:
+    for i in range(2,num):
+        if(num % i) == 0:
+            print(num,'is not a prime number')
+            print(i,'times',num//i,'is',num)
+            break
+    else:
+        print(num,'is a prime number')
+#if input number is less than
+#or equal to 1, it is not prime
+else:
+    print(num,'is not a prime number')
+    
+    
+
+#program to design a triangle of A,B,C,D,E
+#outer loop for ith rows
+for i in range(65,70):
+    #inner loop for jth columns
+    for j in range(65,i+1):
+        print(chr(j),end="")
+        
