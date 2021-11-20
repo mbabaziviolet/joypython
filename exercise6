@@ -242,10 +242,12 @@ else:
     
     
 
-#program to design a triangle of A,B,C,D,E
+#program to design a triangle
 #outer loop for ith rows
-for i in range(65,70):
-    #inner loop for jth columns
-    for j in range(65,i+1):
-        print(chr(j),end="")
+rows=int(input('Enter number of rows:'))
+for i in range(rows):
+    for j in range(i+1):
+        print("*",end="")
+    print("\n")
+
         
